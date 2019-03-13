@@ -1,0 +1,22 @@
+@import '~antd/dist/antd.css';
+@import '../public/style/index.scss';
+
+#root {
+  height: 100%;
+  .ant-layout.ant-layout-has-sider {
+    height: 100%;
+  }
+  .wrapper {
+    height: 100%;
+    #nav {
+      box-shadow: 2px 0 6px rgba(0, 21, 41, 0.35);
+    }
+    &-main {
+      height: 100%;
+      padding: 20px;
+      .bgwh {
+        height: 100%;
+      }
+    }
+  }
+}

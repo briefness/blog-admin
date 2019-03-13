@@ -1,0 +1,29 @@
+.article-list {
+	width: 800px;
+	&__cell {
+		padding: 20px;
+		transition: all 1s;
+		border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+		&:hover {
+			box-shadow:
+			 -6px -6px 8px -4px rgba(250,254,118,0.75),
+			  6px -6px 8px -4px rgba(254,159,50,0.75),
+			  6px 6px 8px -4px rgba(255,255,0,0.75),
+			  6px 6px 8px -4px rgba(0,0,255,2.75);
+			.article-action {
+				display: inline-block;
+				position: absolute;
+				top: 0;
+				right: 0;
+			}
+		}
+		.article-action {
+			display: none;
+		}
+		.article-content__content {
+			line-height: 1.4em;
+		  /* 3 times the line-height to show 3 lines */
+		  height: 4.2em;
+		}
+	}
+}

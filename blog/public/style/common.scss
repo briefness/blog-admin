@@ -1,0 +1,111 @@
+@for $i from 1 through 200 {
+  /** margin **/
+  .mt#{$i} {
+    margin-top: #{$i}px !important;
+  }
+  .mr#{$i} {
+    margin-right: #{$i}px !important;
+  }
+  .ml#{$i} {
+    margin-left: #{$i}px !important;
+  }
+  .mb#{$i} {
+    margin-bottom: #{$i}px !important;
+  }
+  .mg#{$i} {
+    margin: #{$i}px !important;
+  }
+
+  /** padding **/
+  .pt#{$i} {
+    padding-top: #{$i}px !important;
+  }
+  .pr#{$i} {
+    padding-right: #{$i}px !important;
+  }
+  .pl#{$i} {
+    padding-left: #{$i}px !important;
+  }
+  .pb#{$i} {
+    padding-bottom: #{$i}px !important;
+  }
+  .pd#{$i} {
+    padding: #{$i}px !important;
+  }
+
+  /** absolute direction **/
+  .tp#{$i} {
+    top: #{$i}px !important;
+  }
+  .bt#{$i} {
+    bottom: #{$i}px !important;
+  }
+  .lt#{$i} {
+    left: #{$i}px !important;
+  }
+  .rt#{$i} {
+    right: #{$i}px !important;
+  }
+}
+
+/* position */
+.rel {
+  position: relative;
+}
+
+.abs {
+  position: absolute;
+}
+
+/** font-size **/
+@for $i from 12 through 40 {
+  .f#{$i} {
+    font-size: #{$i}px !important;
+  }
+}
+
+/** line-height **/
+@for $i from 14 through 36 {
+  .lh#{$i} {
+    line-height: #{$i}px !important;
+  }
+}
+
+.bgwh {
+  background-color: white;
+}
+.flex {
+  display: flex;
+}
+
+/* white-space */
+/* 段落中的文本不换行 */
+.nowrap {
+  white-space: nowrap;
+}
+.over-text {
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+/** color **/
+.wh {
+	color: #fff!important;
+}
+
+/* text-align */
+.text-center {
+  text-align: center;
+}
+
+.text-right {
+  text-align: right;
+}
+
+.text-left {
+  text-align: left;
+}
+
+.text-jus {
+  text-align: justify;
+}

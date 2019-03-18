@@ -15,7 +15,7 @@ class ArticleInfoStore {
     this.articleInfo = data;
   }
 
-	// 博客信息维护
+	// 博客列表信息维护
   loadArticleInfo = () => {
     return axios.get('/get_blogList').then((data) => {
       if (data) {

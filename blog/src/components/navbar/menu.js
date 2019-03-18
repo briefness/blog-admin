@@ -1,11 +1,19 @@
 const menuList = [
+  {
+      title: 'Dashboard',
+      key: '/dashboard'
+  },
     {
-        title: '首页',
+        title: '博客列表',
         key: '/home'
     },
 		{
         title: '发布',
         key: '/release'
+    },
+    {
+        title: '个人中心',
+        key: '/user'
     },
     // {
     //     title: 'UI',

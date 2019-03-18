@@ -1,5 +1,8 @@
 .article-list {
-	width: 800px;
+	height: 100%;
+	& > ul {
+		width: 800px;
+	}
 	&__cell {
 		padding: 20px;
 		transition: all 1s;

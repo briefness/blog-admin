@@ -6,13 +6,14 @@ import {
 } from 'antd';
 
 class LoginForm extends Component {
+
   handleSubmit = (e) => {
     e.preventDefault();
     this.props.form.validateFields((err, values) => {
       if (!err) {
         console.log('Received values of form: ', values);
-        window.sessionStorage.setItem("userId", 1);
-        this.props.history.push('/home');
+        window.sessionStorage.setItem("userId", values.userName);
+        this.props.history.push('/dashboard');
       }
     });
   }
@@ -43,11 +44,11 @@ class LoginForm extends Component {
           })(
             <Checkbox>Remember me</Checkbox>
           )}
-          <a className="login-form-forgot" href="javascript:;">Forgot password</a>
+          <span className="color-a fr">Forgot password</span>
           <Button type="primary" htmlType="submit" className="login-form-button">
             Log in
           </Button>
-          Or <a href="javascript:;">register now!</a>
+          Or <span className="color-a">register now!</span>
         </Form.Item>
       </Form>
       </div>

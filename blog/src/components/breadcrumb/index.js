@@ -3,6 +3,7 @@ import { Link, withRouter }from 'react-router-dom';
 import { Breadcrumb } from 'antd';
 import {forEach} from 'lodash';
 
+import './index.scss';
 import MenuConfig from "../navbar/menu";
 
 class NewBreadcrumb extends Component {
@@ -45,7 +46,7 @@ class NewBreadcrumb extends Component {
         this.getPath();
     }
     render() {
-        return <Breadcrumb>{this.state.extraBreadcrumbItems}</Breadcrumb>;
+        return <Breadcrumb className="breadcrumb-content">{this.state.extraBreadcrumbItems}</Breadcrumb>;
     }
 }
 export default withRouter(NewBreadcrumb);

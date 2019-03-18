@@ -31,7 +31,7 @@ class Home extends Component {
   render() {
     const { loading } = this.state;
     return (
-      <div className="article-list">
+      <div className="article-list bgwh">
 			   <ul>
          {articles.map((article) =>
            <li  className="article-list__cell" key={article.id}>

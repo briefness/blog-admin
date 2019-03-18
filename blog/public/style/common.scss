@@ -58,7 +58,7 @@
 }
 
 /** font-size **/
-@for $i from 12 through 40 {
+@for $i from 12 through 54 {
   .f#{$i} {
     font-size: #{$i}px !important;
   }
@@ -92,6 +92,9 @@
 .wh {
 	color: #fff!important;
 }
+.color-a {
+  color: #006eff;
+}
 
 /* text-align */
 .text-center {
@@ -108,4 +111,15 @@
 
 .text-jus {
   text-align: justify;
+}
+
+/* float */
+.fl {
+  float: left;
+}
+.fr {
+  float: right;
+}
+.overflow-hidden {
+  overflow: hidden;
 }

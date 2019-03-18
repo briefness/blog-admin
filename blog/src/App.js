@@ -17,7 +17,7 @@ class App extends Component {
           <Header className="bgwh header-line-height"><HeaderBar/></Header>
           <Breadcrumb/>
           <Content className="wrapper-main">
-            <div className="bgwh">{this.props.children}</div>
+            <div className="wrapper-content">{this.props.children}</div>
           </Content>
         </Layout>
 

@@ -39,7 +39,7 @@ export default class Release extends Component {
 
         const { editorState } = this.state
         return (
-            <div className="release-article rel">
+            <div className="release-article bgwh rel">
                 <BraftEditor
                     value={editorState}
                     onChange={this.handleEditorChange}

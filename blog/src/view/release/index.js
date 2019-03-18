@@ -5,6 +5,7 @@ import BraftEditor from 'braft-editor';
 import { Button } from 'antd';
 // 引入编辑器样式
 import 'braft-editor/dist/index.css';
+import { Prompt } from 'react-router-dom';
 import './index.scss';
 
 export default class Release extends Component {
@@ -40,6 +41,7 @@ export default class Release extends Component {
         const { editorState } = this.state
         return (
             <div className="release-article bgwh rel">
+                <Prompt message="还未保存发布，你确定要离开吗？" />
                 <BraftEditor
                     value={editorState}
                     onChange={this.handleEditorChange}

@@ -12,7 +12,9 @@ export default class Release extends Component {
 
     state = {
         // 创建一个空的editorState作为初始值
-        editorState: BraftEditor.createEditorState(null)
+        editorState: BraftEditor.createEditorState(null),
+        // 是否弹出离开提示，默认否
+        isRelease: false
     }
 
     async componentDidMount () {
@@ -23,25 +25,29 @@ export default class Release extends Component {
             editorState: BraftEditor.createEditorState(htmlContent)
         })
     }
-
+    // 发布
     submitContent = async () => {
         // 在编辑器获得焦点时按下ctrl+s会执行此方法
         // 编辑器内容提交到服务端之前，可直接调用editorState.toHTML()来获取HTML格式的内容
         const htmlContent = this.state.editorState.toHTML();
+        // 已点击发布，设置为false，再点击离开，则不需要弹出提示
+        this.setState({isRelease: false});
         console.log(htmlContent);
         // const result = await saveEditorContent(htmlContent)
     }
-
+    // 内容改变，执行此方法
     handleEditorChange = (editorState) => {
-        this.setState({ editorState })
+        // 当编辑了博客，则设置为true，表示需要弹出离开提示
+        this.setState({isRelease: true});
+        this.setState({ editorState: editorState })
     }
 
     render () {
 
-        const { editorState } = this.state
+        const { editorState, isRelease } = this.state
         return (
             <div className="release-article bgwh rel">
-                <Prompt message="还未保存发布，你确定要离开吗？" />
+                <Prompt when={isRelease} message="还未保存发布，你确定要离开吗？" />
                 <BraftEditor
                     value={editorState}
                     onChange={this.handleEditorChange}
